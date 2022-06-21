@@ -20,9 +20,8 @@ function isNumber($x) {
 }
 //3. 数値の入った配列を引数として受け取り、配列内の要素をすべて二倍にして配列として返却するdoubleArr関数。ただし引数が配列でなかった場合はfalseを返却すること
 
-$result = dubleArr(array(1,2,3));
+$result = doubleArr(array(1,2,3));
 
-// 引数に配列以外を渡した場合
 if (!$result) {
     echo "引数が不正です!";
     return;
@@ -33,8 +32,19 @@ foreach ($result as $num) {
     echo "\n";
 }
 
-function dubleArr($array){
-    foreach ()
+
+
+
+function doubleArr($array) {
+    if (is_array($array)) {
+        $answer = array();
+        foreach ($array as $i) {
+            $answer[] = $i * 2;
+        }   
+        return $answer;
+    }   else {
+        return false;
+    }  
 }
 
 
