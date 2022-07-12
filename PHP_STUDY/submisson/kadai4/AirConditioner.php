@@ -18,37 +18,20 @@ class AirConditioner {
     /*
     コンストラクタ
     */
-    /*function cooler($mode) {
-        return "冷房"; 
-    }
-    
-    function heating() {
-        
-    }
-    
-    function dry(){
-        
-    }*/
-    
-    function __constract($mode, $temperature, $power){
+    function __construct($mode, $temperature, $power){
         // 初期設定は冷房モードとすること
         // 温度・風量は引数で受け取ること
         $this->mode = $mode;
+        if (18 >= $temperature >= 30) {
+            echo $temperature;
+        }   else {
+            echo 18;
+        }
         $this->temperature = $temperature;
         $this->power = $power;
     }
     
-    function getmode() {
-        return $this->mode;
-    }
-    
-    function gettemperature() {
-        return $this->temperature;
-    }
-    
-    function getpower() {
-        return $this->power;
-    }
+   
     /* 現在設定を表示 */
     function showStatus() {
         echo "======現在の設定======\n";
